@@ -13,6 +13,16 @@ class persona {
     private String edad;
     private String sexo;
 
+    public persona() {
+    }
+
+    public persona(String nombre, String apellido, String edad, String sexo) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.sexo = sexo;
+    }
+
     void registrar(){
         Scanner lector = new Scanner(System.in);
         String texto; 
@@ -28,5 +38,37 @@ class persona {
 
     void imprimirDatos(){
         System.out.println(this.apellido + " " + this.nombre + " " + this.edad + " " + this.sexo);
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 }

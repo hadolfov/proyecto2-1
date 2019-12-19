@@ -22,10 +22,13 @@ public class Proyecto21 {
         
         Scanner lector = new Scanner(System.in);
         String tecla;
-        //persona p =  new persona();
+        
         do {
-            //p.registrar();
-
+            persona p1 =  new persona();
+            p1.registrar();
+            p1.imprimirDatos();
+            
+           
             System.out.print("Digite el nombre: ");
             String nombre = lector.next();
             System.out.print("Digite el apellido: ");
@@ -35,9 +38,18 @@ public class Proyecto21 {
             System.out.print("Digite el sexo: ");
             String sexo = lector.next();
             
-            persona p =  new persona(nombre,apellido,edad,sexo);
+            persona p2 =  new persona(nombre);            
+            p2.imprimirDatos();
             
-            p.imprimirDatos();
+            persona p3 =  new persona(nombre,apellido);            
+            p3.imprimirDatos();
+            
+            persona p4 =  new persona(nombre,apellido,edad);            
+            p4.imprimirDatos();
+            
+            persona p5 =  new persona(nombre,apellido,edad,sexo);            
+            p5.imprimirDatos();
+            
             System.out.print("Desea salir? S/N: ");
             tecla = lector.next().substring(0, 1).toUpperCase();
         } while (!"S".equals(tecla));

@@ -23,6 +23,27 @@ class persona {
         this.sexo = sexo;
     }
 
+    public persona(String nombre, String apellido, String edad) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.sexo = "-";
+    }
+
+    public persona(String nombre, String apellido) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = "-";
+        this.sexo = "-";
+    }
+
+    public persona(String nombre) {
+        this.nombre = nombre;
+        this.apellido = "-";
+        this.edad = "-";
+        this.sexo = "-";
+    }
+    
     void registrar(){
         Scanner lector = new Scanner(System.in);
         String texto; 
